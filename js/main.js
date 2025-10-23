@@ -64,7 +64,7 @@ function calcularPromedio(nota1, nota2, nota3) {
 console.log("Tu promedio es de " + calcularPromedio(3, 10, 8))
 
 function pesosADolares() {
-    const pesos = Number(prompt("Ingresar cuantos pesos tenés"))
+    const pesos = parseInt(prompt("Ingresar cuantos pesos tenés"))
     const resultado = pesos / 1500;
     alert("Equivale a " + resultado + " USD")
     return resultado
@@ -79,7 +79,7 @@ const golesMessiCarrera = [
   38, 30, 32, 20, 25
 ];
 
-function sumarGoles(golesMessiCarrera){
+function sumarGol(golesMessiCarrera){
     let total= 0
     for (let i = 0; i < golesMessiCarrera.length; i++) {
         total += golesMessiCarrera[i]; 
@@ -87,4 +87,4 @@ function sumarGoles(golesMessiCarrera){
     return total;
 }
 
-console.log("Leo Messi a lo largo de su carrera hizo " + sumarGoles(golesMessiCarrera) + " goles, ya esta por alcanzar los 1000")
+console.log("Leo Messi a lo largo de su carrera hizo " + sumarGol(golesMessiCarrera) + " goles, ya esta por alcanzar los 1000")
