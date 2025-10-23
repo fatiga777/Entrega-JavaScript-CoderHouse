@@ -1,8 +1,8 @@
-let año= "2022"
+let anio = "2022"
 
-if(año == "2022") {
+if(anio === "2022") {
     console.log("EN ESTE AÑO QATAR 2022 GANAMOS EL MUNDIALL, ¡¡SOMOS CAMPEONES!!")
-} else if (año == "2014") {
+} else if (anio === "2014") {
     console.log("Perdimos... pero aún hay oportunidades")
 } else {
     console.log("Argentina la mejor seleccion del mundo")
@@ -12,7 +12,7 @@ if(año == "2022") {
 
 let continuar = true;
 while(continuar) {
-    let menu = parseInt(prompt("Ingresar 2006, 2010, 2014, 2018 o 2022, Para ver que sucedio con Leo Messi en estos años"))
+    let menu = parseInt(prompt("Ingresar año: 2006, 2010, 2014, 2018 o 2022, Para ver que sucedio con Leo Messi en estos años"))
     switch(menu) {
         case 2006:
             alert("Lionel Messi hizo su debut en la Copa Mundial el 16 de junio de 2006, fue eliminado por Alemania empatando 1 a 1 y luego de caer 4 a 2 en penales quedando eliminado")
@@ -37,9 +37,14 @@ while(continuar) {
     }
 
     let confirmacion = prompt("Desea ver que mas paso en sus otros mundiales? (si/no)").toLowerCase()
-    if(confirmacion == "no"){
+    if(confirmacion === "no"){
         continuar = false
         alert("Gracias")
+    }
+    else if (confirmacion === "si" || confirmacion === "sí") {
+    }
+    else {
+    console.log("Opción incorrecta. Respondé si/no")
     }
 }
 
@@ -58,11 +63,28 @@ function calcularPromedio(nota1, nota2, nota3) {
 
 console.log("Tu promedio es de " + calcularPromedio(3, 10, 8))
 
-function calculadoraDolaresaPesos() {
+function pesosADolares() {
     const pesos = Number(prompt("Ingresar cuantos pesos tenés"))
     const resultado = pesos / 1500;
     alert("Equivale a " + resultado + " USD")
     return resultado
 }
 
-calculadoraDolaresaPesos();
+pesosADolares();
+
+const golesMessiCarrera = [
+  17, 25, 38, 45, 47,
+  91, 60, 41, 58, 73,
+  26, 51, 36, 31, 40,
+  38, 30, 32, 20, 25
+];
+
+function sumarGoles(golesMessiCarrera){
+    let total= 0
+    for (let i = 0; i < golesMessiCarrera.length; i++) {
+        total += golesMessiCarrera[i]; 
+    }
+    return total;
+}
+
+console.log("Leo Messi a lo largo de su carrera hizo " + sumarGoles(golesMessiCarrera) + " goles, ya esta por alcanzar los 1000")
